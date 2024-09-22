@@ -8,19 +8,34 @@ function App() {
   const handleImageUpload = (e) => {
     setImage(URL.createObjectURL(e.target.files[0]));
   };
+  const HandleClick=()=>{
+    document.querySelector(".header").style.display="none"
+    window.print();
+    window.location="/"
+  }
 
   return (
     <div className="main">
       <div className="header">
-        <h1>Upload Your Image</h1>
+        <h1>Personalized Poster</h1>
         <div className="imageUploadContainer">
           <input type="file" accept="image/*" onChange={handleImageUpload} />
+          <button onClick={()=>{
+            HandleClick()
+          }}>Download</button>
         </div>
       </div>
       <div className="posterContainer">
-        <div className="imagecont">
-        {image && <img src={image} alt="Uploaded" className="imageUploaded" />}
-        </div>
+        <div
+          className="imagecont"
+          style={{
+            backgroundImage: `url(${image})`,
+            backgroundSize: "contain",
+            backgroundRepeat:"no-repeat",
+            backgroundPosition: "center",
+            padding:"10px"
+          }}
+        ></div>
         <img src={bg} alt="Poster background" className="poster" />
       </div>
     </div>
