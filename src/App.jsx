@@ -11,7 +11,6 @@ function App() {
   const HandleClick=()=>{
     document.querySelector(".header").style.display="none"
     window.print();
-    window.location="/"
   }
 
   return (
