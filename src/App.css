@@ -1,0 +1,41 @@
+.main {
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.posterContainer {
+    position: relative;
+    /* display: inline-block; */
+}
+
+.poster {
+    /* width: 100%; */
+    max-width: 600px;
+    height: 500px;
+}
+
+.imageUploaded {
+    position: absolute;
+    top: 30%;
+    /* Adjust to position the image */
+    left: 30%;
+    /* Adjust to position the image */
+    width: 200px;
+    /* Set fixed width */
+    height: 200px;
+    /* Set fixed height */
+    object-fit: cover;
+    /* Ensure the image fits within the container */
+}
+
+.imagecont {
+    position: absolute;
+    width: 140px;
+    height: 170px;
+    background-color: yellow;
+    bottom: 12px;
+    right: 12px;
+}
