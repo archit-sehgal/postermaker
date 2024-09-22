@@ -9,7 +9,7 @@ function App() {
     setImage(URL.createObjectURL(e.target.files[0]));
   };
   const HandleClick=()=>{
-    document.querySelector(".header").style.display="none"
+    document.querySelector(".header").style.visibility="hidden"
     window.print();
   }
 
