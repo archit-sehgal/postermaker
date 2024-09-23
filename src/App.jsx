@@ -1,5 +1,6 @@
 import { useState } from "react";
 import bg from "./assets/bgphotopostermaker.png";
+import html2canvas from "html2canvas";
 import "./App.css";
 
 function App() {
@@ -8,10 +9,17 @@ function App() {
   const handleImageUpload = (e) => {
     setImage(URL.createObjectURL(e.target.files[0]));
   };
-  const HandleClick=()=>{
-    document.querySelector(".header").style.visibility="hidden"
-    window.print();
-  }
+
+  const handleScreenshot = () => {
+    const posterElement = document.querySelector(".posterContainer");
+
+    html2canvas(posterElement).then((canvas) => {
+      const link = document.createElement("a");
+      link.href = canvas.toDataURL("image/png");
+      link.download = "poster_screenshot.png";
+      link.click();
+    });
+  };
 
   return (
     <div className="main">
@@ -20,9 +28,7 @@ function App() {
         <h2 style={{color:"red",marginBottom:"5px"}}>Personalized Poster</h2>
         <div className="imageUploadContainer">
           <input type="file" accept="image/*" onChange={handleImageUpload} />
-          <button onClick={()=>{
-            HandleClick()
-          }}>Download</button>
+          <button onClick={handleScreenshot}>Download</button>
         </div>
       </div>
       <div className="posterContainer">

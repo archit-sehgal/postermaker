@@ -30,7 +30,7 @@
 .header h2 {
   font-size: 2rem;
   font-family: "Pacifico", cursive;
-  animation: variants 3s infinite ease-in; /* Adjusted time for a smoother transition */
+  animation: variants 3s infinite ease-in;
 }
 
 @keyframes variants {
