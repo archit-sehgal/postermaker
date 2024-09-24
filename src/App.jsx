@@ -24,8 +24,8 @@ function App() {
   return (
     <div className="main">
       <div className="header">
-        <h1 style={{"marginBottom":"-30px","letterSpacing":"-.04rem","wordSpacing":".5rem"}}>USMAN MAJID</h1>
-        <h2 style={{color:"red",marginBottom:"5px"}}>Personalized Poster</h2>
+      <h2 style={{color:"red",marginBottom:"-30px"}}>Selfie with</h2>
+        <h1 style={{"marginBottom":"10px","letterSpacing":"-.04rem","wordSpacing":".5rem"}}>USMAN MAJID</h1>
         <div className="imageUploadContainer">
           <input type="file" accept="image/*" onChange={handleImageUpload} />
           <button onClick={handleScreenshot}>Download</button>
